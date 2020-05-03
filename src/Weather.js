@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import CompleteDate from "./CompleteDate";
 
 import "./App.css";
 import "./Weather.css";
@@ -17,6 +18,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
+      date: new Date(response.data.dt * 1000),
     });
   }
   function handleSubmit(event) {
@@ -49,7 +51,9 @@ export default function Weather(props) {
     return (
       <div className="card">
         <h2>{form}</h2>
-        <h4>weekday, hour, time</h4>
+        <h4>
+          <CompleteDate date={weather.date} />
+        </h4>
         <div className="row">
           <div className="col-4">
             <div className="result">

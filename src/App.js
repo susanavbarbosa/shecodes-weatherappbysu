@@ -14,7 +14,10 @@ export default function App() {
             SUsana Barbosa{" "}
           </a>{" "}
           and
-          <a href="" target="_blank">
+          <a
+            href="https://github.com/susanavbarbosa/shecodes-weatherappbysu"
+            target="_blank"
+          >
             {" "}
             open-sourced
           </a>
