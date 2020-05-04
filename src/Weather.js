@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import CompleteDate from "./CompleteDate";
+import Forecast from "./Forecast";
 
 import "./App.css";
 import "./Weather.css";
@@ -75,6 +76,9 @@ export default function Weather(props) {
         </div>
         <h5>Next:</h5>
         <div>
+          <div>
+            <Forecast />
+          </div>
           <div className="container">
             <div className="row">
               <div className="col-sm">
