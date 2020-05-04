@@ -11,7 +11,6 @@ export default function Weather(props) {
   let [weather, setWeather] = useState({});
 
   function displayWeather(response) {
-    setSelected(true);
     setWeather({
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
@@ -20,6 +19,7 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
     });
+    setSelected(true);
   }
   function handleSubmit(event) {
     event.preventDefault();
